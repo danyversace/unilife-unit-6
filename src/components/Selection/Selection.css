@@ -1,0 +1,47 @@
+.main-selection-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    
+    width: auto;
+    
+
+
+    min-height: 400px;
+}
+
+.selection-container-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 440px;
+}
+
+.selection-item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.selection-item button {
+    width: 240px;
+    height: 48px;
+    border-radius: 12px;
+
+    background-color: #3A5295;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    color: white;
+
+
+    border: none;
+
+}

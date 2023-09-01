@@ -1,0 +1,46 @@
+.main-cities-container {
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cities-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 70%;
+    margin: 5rem 0.5rem; 
+    min-height: 70vh;
+
+    gap: 1rem;
+}
+
+.citie-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 18rem;
+    height: 5rem;
+    border: 1px solid grey;
+    border-radius: 30px;
+
+    cursor: pointer;
+}
+
+.citie-btn:hover {
+    background-color: #3A5295;
+    color: white;
+}
+
+.cities-heading {
+    margin-top: 20px;
+    font-size: 45px;
+}

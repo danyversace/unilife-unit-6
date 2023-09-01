@@ -1,0 +1,105 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 40px;
+
+    background-color: #00A2E1;
+    padding: 2vh;
+    color: white;
+}
+
+.home-img {
+width: 30px;
+height: 25px;
+}
+
+.homepage-btn {
+    cursor: pointer;
+}
+
+.header-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header-img {
+    margin-right: 8px;
+}
+
+.header-schort-list{
+    margin-right: 15px;
+}
+
+.link-to {
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+
+/* Modal styling */
+
+.contact-us-top {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    
+}
+
+.contact-us-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    min-height: 15vh;
+    
+
+}
+.form-container-buttom {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.contact-us-img {
+    position: absolute;
+
+    width: 88px;
+    height: 88px;
+
+    right: 0px;
+}
+
+.form-left-container {
+    width: 100%;
+}
+
+.form-right-container {
+    width: 100%;
+}
+
+.form-right-container button {
+    background-color: #3A5295;
+    border: none;
+    color: white;
+
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    width: 80%;
+
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.link-to {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}

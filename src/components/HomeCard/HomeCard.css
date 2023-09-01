@@ -1,0 +1,105 @@
+.home-card-container {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    border-radius: 20px;
+
+    border: 1px solid grey;
+}
+
+.home-card-container-info {
+    width: auto;
+    height: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    color: white;
+    background-color: #3A5295;
+}
+
+.home-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px;
+}
+
+
+.home-card-details-container {
+    width: auto;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.home-card-details-container-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 110px;
+}
+
+
+.home-address-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.home-address-container-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* price text style to make it smaller */
+ 
+.bill-text {
+    font-size: 10px;
+}
+
+
+
+
+.home-icons {
+    display: flex;
+    gap: 10px;
+}
+
+
+.home-card-img {
+    width: 100%;
+
+    height: 230px;
+    border-radius: 20px 20px 0 0;
+}
+
+.mushroom-home {
+    font-size: 20px;
+}
+
+.mushroom-home-link {
+    text-decoration: none;
+    color: black;
+}
+
+.home-card-container-bottom {
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

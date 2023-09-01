@@ -1,0 +1,132 @@
+.homepage-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    min-height: 100vh;
+ }
+
+.select-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 620px;
+    height: 6vh;
+
+    gap: 30px;
+
+    background-color: #ffff;
+    border-radius: 24px;
+    
+    padding: 25px;
+    margin-top: -25px;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+   /* position: absolute; */
+
+   /* top: 350px; */
+
+    z-index: 1;
+}
+
+.select-container-select {
+    border: 1px solid #CED3D8;
+    border-radius: 16px;
+    width: 50%;
+    height: 3vh;
+    background-color: white;
+
+    color: #3A5295;
+
+    font-weight: 800;
+}
+
+.select-container-options {
+    font-weight: 800;
+}
+
+.select-btn {
+    background-color: #3A5295;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+
+    border: none;
+
+    width: 10vh;
+    height: 3vh;
+}
+
+.cities-card-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.cities-card-container-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+}
+
+.see-all-cities-button {
+    background-color: #3A5295;
+    color: white;
+
+    width: 200px;
+    height: 48px;
+    top: 1737px;
+    left: 621px;
+    border-radius: 12px;
+
+
+    border: none;
+    margin-bottom: 50px;
+}
+
+.selection-container {
+    display: flex;
+
+    margin-top: 150px;
+
+    position: relative;
+
+    width: 50%;
+}
+
+.selection-container .phone-man {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+    right: -300px;
+    bottom: 0px;
+
+}
+
+@media screen and (max-width: 1056px) {
+    .selection-container {
+        flex-wrap: wrap;
+        margin-bottom: 100px;     
+    }
+
+    .selection-container .phone-man {
+
+        display: none;
+    }
+}
