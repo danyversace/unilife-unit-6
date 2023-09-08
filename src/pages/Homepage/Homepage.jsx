@@ -52,13 +52,13 @@ const selectFunction = (e) => {
                 }
         </select>
 
-          <Link to={`/citydetails/${cityId}`}><button className='select-btn'>Find Homes</button></Link> 
+          <Link className='select-btn' to={`/citydetails/${cityId}`} >Find Homes</Link> 
          </div>
 
          <div className='cities-card-container'>
             <div className='cities-card-container-box'>
                 {
-                    cities.slice(0,9).map(item =><CityCard key={item.id} cities={item} />)
+                    cities.slice(0,9).map(item =><CityCard key={item?._id} cities={item} />)
                 }
             </div>
         </div>
@@ -69,7 +69,7 @@ const selectFunction = (e) => {
         </div>
         <div className='selection-container'>
             <Selection />
-            <img src='src\assets\phoneman.png' alt="" className='phone-man'/>
+            <img src='/phoneman.png' alt="" className='phone-man'/>
         </div>
     </div>
   )

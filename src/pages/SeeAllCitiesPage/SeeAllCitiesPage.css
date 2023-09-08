@@ -44,3 +44,7 @@
     margin-top: 20px;
     font-size: 45px;
 }
+
+.cities-item-link {
+    text-decoration: none;
+}

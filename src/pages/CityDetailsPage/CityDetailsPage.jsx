@@ -11,7 +11,10 @@ import axios from 'axios'
 
 
 
+
 function CityDetailsPage() {
+
+
 
 
     // extract city id from url
@@ -44,7 +47,6 @@ function CityDetailsPage() {
     const prices = [500, 1000, 1500, 2000, 10000]
 
     const propTypes = ['Detached', 'Apartment','Semi-Detached']
-
 
 
 
@@ -132,7 +134,7 @@ function CityDetailsPage() {
                         <option value="">Any bedroom</option>
                         {
                         bedNums.map((num) =>
-                         <option key={num} value={num}>
+                         <option key={num}  value={num}>
                             {num}
                             </option>
                              )
@@ -186,7 +188,7 @@ function CityDetailsPage() {
 
            <div className='properties-container'>
                 {
-                    properties?.map((item) => <HomeCard key={item.id} property={item} cityId={cityId}/>)
+                    properties?.map((item) => <HomeCard key={item?._id} property={item} cityId={cityId}/>)
                 }
            </div>
         </div>

@@ -7,21 +7,21 @@ function Compare() {
     <h2>Compare all inclusive student homes.</h2>
       <div className='compare-container'>
         <div className="compare-info-box">
-            <img src='src\assets\Vector.png' alt="" className='compare-info-box-img'/>
+            <img src='/vector.png' alt="" className='compare-info-box-img'/>
             <h3>Search</h3>
             <p>Find your dream home in the 
             perfect area near your university.
             </p>
         </div>
         <div className="compare-info-box">
-            <img src='src\assets\rule.png' alt="" className='compare-info-box-img'/>
+            <img src='/rule.png' alt="" className='compare-info-box-img'/>
             <h3>Compare</h3>
             <p>Compare student accommodation to 
                find the right home for you.
             </p>
         </div>
         <div className="compare-info-box">
-            <img src='src\assets\Bill.png' alt="" className='compare-info-box-img'/>
+            <img src='/bill.png' alt="" className='compare-info-box-img'/>
             <h3>Bills Included</h3>
             <p>Bills are included in all rent prices. 
                No hidden fees.

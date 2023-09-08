@@ -8,8 +8,8 @@ import Footer from './components/Footer/Footer'
 import SeeAllCitiesPage from './pages/SeeAllCitiesPage/SeeAllCitiesPage'
 import CityDetailsPage from './pages/CityDetailsPage/CityDetailsPage'
 import HomeDetailsPage from './pages/HomeDetailsPage/HomeDetailsPage'
-// import ShortLists from './pages/ShortLists/ShortLists'
-// import ShortlistContext from './contexts/ShortlistContext'
+import Favorites from './pages/Favorites/Favorites'
+import FavoritesContextProvider from './contexts/FavoritesContext'
 
 
 function App() {
@@ -17,17 +17,17 @@ function App() {
   return (
     <div>
     <BrowserRouter>
-    {/* <ShortlistContextProvider> */}
+     <FavoritesContextProvider>
           <Header />
             <Routes>
               <Route path='/' element={<Homepage />}/>
               <Route path='/cities' element={<SeeAllCitiesPage />}/>
-              {/* <Route path='/shortlist' element={<ShortLists />}/>   */}
+              <Route path='/favorites' element={<Favorites />}/>  
               <Route path='/citydetails/:cityId' element={<CityDetailsPage />}/>
               <Route path='/homedetails/:homeId' element={<HomeDetailsPage />}/>
             </Routes>
             <Footer />
-            {/* </ShortlistContextProvider> */}
+       </FavoritesContextProvider>
       </BrowserRouter>
     </div>
   )

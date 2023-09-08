@@ -39,7 +39,7 @@ function Header() {
       </div>
       <div className='header-item'>
         <AiOutlineHeart className='header-img'/>
-          <Link to='/shortlist'  className='link-to'><h4 className='header-schort-list link-to'>Shortlist</h4></Link>
+          <Link to='/favorites'  className='link-to'><h4 className='header-schort-list link-to'>Shortlist</h4></Link>
         <AiOutlineMail className='header-img '/>
         <h4 className='link-to' onClick={()=>setIsOpen(true)}>Contact Us</h4>
                     <Modal

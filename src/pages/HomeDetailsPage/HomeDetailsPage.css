@@ -421,7 +421,7 @@
 
 
 
-@media screen and (max-width: 1258px) {
+@media screen and (max-width: 1400px) {
 
     .home-details-container-bottom {
         margin-right: 0;
@@ -430,5 +430,7 @@
 
     .home-details-container {
         width: 620px;
+        margin: 0 auto;
+        /* the width is set for content, and margin centers it */
     }
 }

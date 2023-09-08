@@ -35,7 +35,7 @@ Whatever you're after, we can help you find the right student accommodation for 
             <div className='cities-item'>
                 
                 {
-                    citie.map((item,index)=> <Link key={item?._id} to={`/citydetails/${item?._id}`} ><button className='citie-btn'>{item.name}</button></Link> )
+                    citie.map((item,index)=> <Link key={item?._id} to={`/citydetails/${item?._id}`} className='cities-item-link' ><button className='citie-btn'>{item.name}</button></Link> )
                 }
             </div>
     </div>

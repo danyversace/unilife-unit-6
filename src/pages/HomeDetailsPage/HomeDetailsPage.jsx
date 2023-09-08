@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react'
 import {useParams, Link} from 'react-router-dom'
 import './HomeDetailsPage.css'
-// import Shortlist from '../../contexts/ShortlistContext'
 import axios from 'axios'
 
 import { AiOutlineHeart, AiOutlineDown, AiOutlineDoubleLeft, AiFillHeart } from "react-icons/ai"
@@ -10,6 +9,8 @@ import { BiBed, BiBath, BiPound } from "react-icons/bi"
 
 
 import Modal from 'react-modal';
+
+import { FavoritesContext } from '../../contexts/FavoritesContext'
 
 const customStyles = {
     content: {
@@ -30,16 +31,34 @@ const customStyles = {
 
 export default function HomeDetailsPage() {
 
+    // get the global state
+    //NOTE {} NOT []
+
+    const {addProperty, favorites, removeProperty} = useContext(FavoritesContext)
+
+    // const isFavorite = false
+    // change to state in order to toggle it
+
+    const [isFavorite, setIsFavorite] = useState(false)
+
+    // how do we know  if this particular property is in favorites?
+
+    useEffect(
+        ()=>{
+            // is property in favorites?
+            setIsFavorite(favorites?.find(item=>item?._id===homeDetails?._id))
+
+        },[favorites] // runs anytime favorites changes
+    )
+
     const { homeId } = useParams()
 
-    // const {shortList, addProperty, removeProp} = useContext(Shortlist)
+
 
     const [homeDetails, setHomeDetails] = useState([])
     const [images, getImages] = useState([])
     const [price, setHomePrice] =useState([])
     const [keyFeatures, setKeyFeatures] = useState([])
-
-    // const [isInShortList, setIsInShortList] = useState(false)
 
     useEffect(
         ()=>{
@@ -56,25 +75,14 @@ export default function HomeDetailsPage() {
         },[]
     )
 
-    // useEffect(
-    //     ()=> {
-    //       //console.log('shortlist changed')
-    
-    
-    //       //is this property in shortlist?
-    //       setIsInShortList(shortList?.find(item=>item.id===homeDetails.id))
-    
-    //     }, [shortList]
-    //   )
-
-    
-
     const changeImages = (index) => {
         let imgIndx = document.getElementById('imageIndex');
         imgIndx.setAttribute('src', images[index]);
     }
 
     const [isOpenModal, setIsOpenModal] = useState(false)
+
+    
 
   return (
     <div className='home-details-container'>
@@ -138,24 +146,12 @@ export default function HomeDetailsPage() {
                     </div>
                 </div>
                 <div className='info-bottom-container-buttons'>
-
-                    {/* {
-                        isInShortList?
-                        <button>
-                            <AiOutlineHeart onClick={()=>removeProp(homeDetails.id)} className='short-list-style' /> Shortlist
-                        </button>
+                    {
+                        isFavorite?
+                        <button><AiFillHeart onClick={()=>removeProperty(homeDetails?._id)} className='short-list-style' /> Shortlist</button>
                         :
-                        <button>
-                            <AiFillHeart onClick={()=>addProperty(homeDetails)} className='short-list-style' /> Shortlist
-                        </button>
-                    } */}
-
-
-
-
-
-
-                    <button><AiOutlineHeart className='short-list-style' /> Shortlist</button>
+                        <button><AiOutlineHeart onClick={()=>addProperty(homeDetails)} className='short-list-style' /> Shortlist</button>
+                    }
                     <button className='info-bottom-book' onClick={()=>setIsOpenModal(true)}>Book Viewing</button>
                         <Modal
                             isOpen={isOpenModal}
